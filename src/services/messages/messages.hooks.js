@@ -1,11 +1,13 @@
 
 
+const processMessage = require('../../hooks/process-message');
+
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [processMessage()],
     update: [],
     patch: [],
     remove: []
